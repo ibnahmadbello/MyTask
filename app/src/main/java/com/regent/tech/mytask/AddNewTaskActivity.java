@@ -7,6 +7,8 @@ import android.view.MenuItem;
 
 public class AddNewTaskActivity extends AppCompatActivity {
 
+    private static final String TAG = AddNewTaskActivity.class.getSimpleName();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
