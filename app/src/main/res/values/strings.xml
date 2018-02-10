@@ -3,4 +3,7 @@
     <string name="title_of_task">Title of Task</string>
     <string name="date_of_task">Deadline of Task</string>
     <string name="set_task_status">Done</string>
+    <string name="name_of_each_task">Task</string>
+    <string name="date_of_your_task">Deadline</string>
+    <string name="details_of_your_task">Task Details</string>
 </resources>
