@@ -8,4 +8,6 @@
     <string name="details_of_your_task">Task Details</string>
     <string name="save_task">Save</string>
     <string name="add_a_task">Add a Task</string>
+    <string name="task_hint">Type the name or title of your task here</string>
+    <string name="detail_hint">Type the detail of your task here</string>
 </resources>

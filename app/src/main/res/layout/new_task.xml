@@ -18,8 +18,9 @@
 
         <EditText
             android:id="@+id/write_your_title_here"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="@string/task_hint"
             android:inputType="text"/>
     </LinearLayout>
 
@@ -52,9 +53,10 @@
 
         <EditText
             android:id="@+id/type_your_details_here"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textMultiLine"/>
+            android:inputType="textMultiLine"
+            android:hint="@string/detail_hint"/>
     </LinearLayout>
 
 </LinearLayout>
