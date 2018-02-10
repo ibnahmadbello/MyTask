@@ -11,4 +11,7 @@
     <string name="task_hint">Type the name or title of your task here</string>
     <string name="detail_hint">Type the detail of your task here</string>
     <string name="important">Is this task important?</string>
+    <string name="important_yes">Yes</string>
+    <string name="important_no">No</string>
+    <string name="important_undecided">I don\'t Know</string>
 </resources>

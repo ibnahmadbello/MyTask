@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="task_important">
+        <item>@string/important_undecided</item>
+        <item>@string/important_yes</item>
+        <item>@string/important_no</item>
+    </string-array>
+</resources>
