@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MyTask</string>
+    <string name="title_of_task">Title</string>
+    <string name="date_of_task">Date</string>
 </resources>
