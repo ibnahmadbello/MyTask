@@ -4,7 +4,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddNewTaskActivity">
+    tools:context=".AddNewTaskActivity"
+    android:layout_margin="@dimen/entire_margin">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,13 +13,15 @@
         android:orientation="horizontal">
         <TextView
             android:id="@+id/title_of_your_task"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="@string/name_of_each_task"/>
 
         <EditText
             android:id="@+id/write_your_title_here"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="2"
             android:layout_height="wrap_content"
             android:hint="@string/task_hint"
             android:inputType="text"/>
@@ -31,13 +34,15 @@
         android:orientation="horizontal">
         <TextView
             android:id="@+id/deadline_of_your_task"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="@string/date_of_your_task"/>
 
         <DatePicker
             android:id="@+id/date_of_your_task"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"/>
     </LinearLayout>
 
@@ -47,16 +52,35 @@
         android:orientation="horizontal">
         <TextView
             android:id="@+id/details_of_your_task"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="@string/details_of_your_task"/>
 
         <EditText
             android:id="@+id/type_your_details_here"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="2"
             android:layout_height="wrap_content"
             android:inputType="textMultiLine"
             android:hint="@string/detail_hint"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/important"/>
+        <Spinner
+            android:id="@+id/spinner_yes_or_no"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="48dp"
+            android:spinnerMode="dropdown"/>
     </LinearLayout>
 
 </LinearLayout>
