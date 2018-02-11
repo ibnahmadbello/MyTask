@@ -17,11 +17,10 @@
         android:layout_weight="1"
         android:layout_height="wrap_content" />
 
-    <Button
+    <TextView
         android:id="@+id/state_of_task"
         android:layout_width="0dp"
         android:layout_weight="1"
-        android:layout_height="wrap_content"
-        android:text="@string/set_task_status"/>
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
