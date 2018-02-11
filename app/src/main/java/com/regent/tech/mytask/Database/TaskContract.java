@@ -16,6 +16,14 @@ public final class TaskContract {
         public static final String COLUMN_TASK_DETAILS = "details";
         public static final String COLUMN_TASK_DATE = "deadline";
         public static final String COLUMN_TASK_STATUS = "important";
+
+        //The options for the COLUMN_TASK_STATUS
+        public static final int IMPORTANT_UNKNOWN = 0;
+        public static final int IMPORTANT_YES = 1;
+        public static final int IMPORTANT_NO = 2;
+
+
+
     }
 
 }
