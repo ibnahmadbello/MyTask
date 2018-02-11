@@ -20,7 +20,7 @@ public class DatabaseSQLiteOpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-
+        db.execSQL(TaskContract.CREATE_TASK_ENTRY_TABLE);
     }
 
     @Override
