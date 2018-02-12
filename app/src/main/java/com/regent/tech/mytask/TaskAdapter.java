@@ -54,6 +54,11 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>{
     @Override
     public void onBindViewHolder(ViewHolder holder, int position){
         //TODO: Need to bind the various views
+        Task task = taskList.get(position);
+
+        holder.taskName.setText(task.getName());
+        holder.taskDate.setText(task.getDate());
+        holder.taskState.setText(task.getStateOfTask());
     }
 
     @Override
