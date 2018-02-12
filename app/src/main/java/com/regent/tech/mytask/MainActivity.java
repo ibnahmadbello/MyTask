@@ -8,6 +8,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import com.regent.tech.mytask.Database.TaskDataSource;
+
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
@@ -15,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private FloatingActionButton floatingActionButton;
     private RecyclerView recyclerView;
     private TaskAdapter adapter;
+    private TaskDataSource dataSource;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
 
         //Setting the RecylerView
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+
+        dataSource = new TaskDataSource(this);
+
         setupRecyclerView();
     }
 
@@ -45,4 +51,17 @@ public class MainActivity extends AppCompatActivity {
         adapter = new TaskAdapter(this);
         recyclerView.setAdapter(adapter);
     }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+        dataSource.open();
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        dataSource.close();
+    }
+
 }
