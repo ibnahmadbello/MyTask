@@ -9,6 +9,7 @@ public class Task {
     private String name;
     private String date;
     private String stateOfTask;
+    private String details;
 
     public Task(String name, String date, String stateOfTask){
         this.name = name;
@@ -38,6 +39,14 @@ public class Task {
 
     public void setStateOfTask(String stateOfTask) {
         this.stateOfTask = stateOfTask;
+    }
+
+    public String getDetails() {
+        return details;
+    }
+
+    public void setDetails(String details) {
+        this.details = details;
     }
 
 }
