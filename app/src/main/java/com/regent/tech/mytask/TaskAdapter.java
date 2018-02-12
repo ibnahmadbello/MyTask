@@ -25,6 +25,10 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>{
         this.mContext = context;
     }
 
+    void setTaskList(List<Task> tasks){
+        this.taskList = tasks;
+    }
+
     public static class ViewHolder extends RecyclerView.ViewHolder{
         TextView taskName;
         TextView taskDate;
@@ -55,6 +59,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>{
     @Override
     public int getItemCount(){
         //TODO: Need to return the size of the task
+        return this.taskList.size();
     }
 
 }
