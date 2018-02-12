@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -9,18 +10,21 @@
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
+        tools:text="First Task"
         />
 
     <TextView
         android:id="@+id/date"
         android:layout_width="0dp"
         android:layout_weight="1"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        tools:text="02/02/1970"/>
 
     <TextView
         android:id="@+id/state_of_task"
         android:layout_width="0dp"
         android:layout_weight="1"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        tools:text="YES"/>
 
 </LinearLayout>

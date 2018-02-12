@@ -30,7 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/title_layout"
-        />
+        tools:listitem="@layout/each_row_task"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
