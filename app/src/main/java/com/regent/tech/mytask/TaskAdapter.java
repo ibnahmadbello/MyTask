@@ -19,6 +19,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>{
 
     private Context mContext;
     private List<Task> taskList;
+    private static final String TAG = TaskAdapter.class.getSimpleName();
 
     public TaskAdapter(Context context, List<Task> tasks){
         this.mContext = context;
