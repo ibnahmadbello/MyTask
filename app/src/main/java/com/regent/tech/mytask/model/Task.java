@@ -5,4 +5,7 @@ package com.regent.tech.mytask.model;
  */
 
 public class Task {
+
+
+
 }
