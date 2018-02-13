@@ -11,8 +11,9 @@ public class Task {
     private String stateOfTask;
     private String details;
 
-    public Task(String name, String date, String stateOfTask){
+    public Task(String name, String details, String date, String stateOfTask){
         this.name = name;
+        this.details = details;
         this.date = date;
         this.stateOfTask = stateOfTask;
     }

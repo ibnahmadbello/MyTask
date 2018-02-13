@@ -2,6 +2,7 @@ package com.regent.tech.mytask.Database;
 
 import com.regent.tech.mytask.model.Task;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -13,7 +14,14 @@ public class TaskDataProvider {
     public static List<Task> taskList;
 
     static {
-        taskList
+        taskList = new ArrayList<>();
+
+        addTask(new Task("Scholarship", "Try to apply for Saudi Arabia Scholarship", "01/01/1970",
+                "Yes"));
+        addTask(new Task("Browsing", "Browse into Nairaland and see what is happening", "02/02/1970",
+                "No"));
+        addTask(new Task("Update", "Going to BUK to find out about the admission stuff", "03/03/1970",
+                "Yes"));
     }
 
 }
