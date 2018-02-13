@@ -11,11 +11,11 @@ public final class TaskContract {
     private TaskContract(){}
 
     static final String CREATE_TASK_ENTRY_TABLE = "CREATE TABLE " + TaskEntry.TABLE_NAME + " ( " +
-            TaskEntry._ID + "INTEGER PRIMARY KEY AUTOINCREMENT, " +
-            TaskEntry.COLUMN_TASK_NAME + "TEXT NOT NULL, " +
-            TaskEntry.COLUMN_TASK_DATE + "TEXT NOT NULL, " +
-            TaskEntry.COLUMN_TASK_DETAILS + "TEXT NOT NULL, " +
-            TaskEntry.COLUMN_TASK_STATUS + "INTEGER NOT NULL, " +
+            TaskEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+            TaskEntry.COLUMN_TASK_NAME + " TEXT NOT NULL, " +
+            TaskEntry.COLUMN_TASK_DATE + " TEXT NOT NULL, " +
+            TaskEntry.COLUMN_TASK_DETAILS + " TEXT NOT NULL, " +
+            TaskEntry.COLUMN_TASK_STATUS + " INTEGER NOT NULL, " +
             "UNIQUE (" + TaskEntry._ID + ") ON CONFLICT REPLACE)";
 
     public static class TaskEntry implements BaseColumns{

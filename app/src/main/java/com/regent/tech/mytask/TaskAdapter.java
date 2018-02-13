@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.regent.tech.mytask.model.Task;
 
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -18,7 +19,7 @@ import java.util.List;
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>{
 
     private Context mContext;
-    private List<Task> taskList;
+    private List<Task> taskList = Collections.emptyList();
     private static final String TAG = TaskAdapter.class.getSimpleName();
 
     public TaskAdapter(Context context){
