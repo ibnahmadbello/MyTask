@@ -24,4 +24,8 @@ public class TaskDataProvider {
                 "Yes"));
     }
 
+    private static void addTask(Task task){
+        taskList.add(task);
+    }
+
 }
