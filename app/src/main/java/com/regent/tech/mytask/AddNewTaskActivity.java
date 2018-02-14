@@ -1,12 +1,20 @@
 package com.regent.tech.mytask;
 
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
+
+import com.regent.tech.mytask.Database.TaskContract;
+import com.regent.tech.mytask.model.Task;
 
 public class AddNewTaskActivity extends AppCompatActivity {
 
@@ -17,6 +25,7 @@ public class AddNewTaskActivity extends AppCompatActivity {
     private DatePicker mDeadlineofTask;
     private Spinner mStateofTask;
 
+    public int mTask = TaskContract.TaskEntry.IMPORTANT_UNKNOWN;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +37,33 @@ public class AddNewTaskActivity extends AppCompatActivity {
         mDeadlineofTask = (DatePicker) findViewById(R.id.date_of_your_task);
         mStateofTask = (Spinner) findViewById(R.id.spinner_yes_or_no);
 
+        setupSpinner();
 
+    }
 
+    private void setupSpinner(){
+        //Create the Adapter for the Spinner
+        ArrayAdapter stateofTaskAdapter = ArrayAdapter.createFromResource(this, R.array.task_important,
+                android.R.layout.simple_spinner_item);
+
+        //Specify the dropdown layout style
+        stateofTaskAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+
+        //Attached the adapter to the Spinner
+        mStateofTask.setAdapter(stateofTaskAdapter);
+
+        //Set the integer selected to a constant value
+        mStateofTask.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String selection = (String) parent.getItemAtPosition(position);
+                if (!TextUtils.isEmpty(selection)){
+                    if (selection.equals(getString(R.string.important_yes))){
+
+                    }
+                }
+            }
+        });
     }
 
     @Override
@@ -41,6 +75,11 @@ public class AddNewTaskActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem menuItem){
 
+        switch (menuItem.getItemId()){
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true;
+        }
 
         return super.onOptionsItemSelected(menuItem);
     }
