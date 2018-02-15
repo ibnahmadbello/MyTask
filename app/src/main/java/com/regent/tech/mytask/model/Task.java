@@ -8,10 +8,10 @@ public class Task {
 
     private String name;
     private String date;
-    private String stateOfTask;
+    private int stateOfTask;
     private String details;
 
-    public Task(String name, String details, String date, String stateOfTask){
+    public Task(String name, String details, String date, int stateOfTask){
         this.name = name;
         this.details = details;
         this.date = date;
@@ -34,11 +34,11 @@ public class Task {
         this.date = date;
     }
 
-    public String getStateOfTask() {
+    public int getStateOfTask() {
         return stateOfTask;
     }
 
-    public void setStateOfTask(String stateOfTask) {
+    public void setStateOfTask(int stateOfTask) {
         this.stateOfTask = stateOfTask;
     }
 

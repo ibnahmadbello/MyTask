@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.regent.tech.mytask.Database.TaskContract;
+import com.regent.tech.mytask.Database.TaskDataSource;
 import com.regent.tech.mytask.model.Task;
 
 public class AddNewTaskActivity extends AppCompatActivity {
@@ -76,6 +77,10 @@ public class AddNewTaskActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem menuItem){
 
         switch (menuItem.getItemId()){
+            case R.id.save_action:
+                //Make a call to the insert database method
+                finish(); //Finish Activity
+                return true;
             case android.R.id.home:
                 NavUtils.navigateUpFromSameTask(this);
                 return true;
