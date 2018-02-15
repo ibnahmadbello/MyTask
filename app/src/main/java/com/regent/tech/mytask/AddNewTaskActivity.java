@@ -60,10 +60,18 @@ public class AddNewTaskActivity extends AppCompatActivity {
                 String selection = (String) parent.getItemAtPosition(position);
                 if (!TextUtils.isEmpty(selection)){
                     if (selection.equals(getString(R.string.important_yes))){
-
+                        mTask = TaskContract.TaskEntry.IMPORTANT_YES;
+                    }
+                    else if (selection.equals(getString(R.string.important_no))){
+                        mTask = TaskContract.TaskEntry.IMPORTANT_NO;
+                    }
+                    else {
+                        mTask = TaskContract.TaskEntry.IMPORTANT_UNKNOWN;
                     }
                 }
             }
+
+
         });
     }
 
