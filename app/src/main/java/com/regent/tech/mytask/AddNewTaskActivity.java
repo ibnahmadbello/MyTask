@@ -26,6 +26,7 @@ public class AddNewTaskActivity extends AppCompatActivity {
     private DatePicker mDeadlineofTask;
     private Spinner mStateofTask;
 
+
     public int mTask = TaskContract.TaskEntry.IMPORTANT_UNKNOWN;
 
     @Override
@@ -71,9 +72,11 @@ public class AddNewTaskActivity extends AppCompatActivity {
                 }
             }
 
+            //Because AdapterView is an abstract class, onNothingSelected must be defined
 
         });
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
