@@ -59,11 +59,13 @@
             android:layout_weight="1"
             android:text="@string/date_of_your_task" />
 
-        <DatePicker
+        <EditText
             android:id="@+id/date_of_your_task"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:inputType="date"
+            android:hint="@string/date_hint"/>
     </LinearLayout>
 
 
