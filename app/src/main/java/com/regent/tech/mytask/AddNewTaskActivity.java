@@ -56,7 +56,18 @@ public class AddNewTaskActivity extends AppCompatActivity {
         mStateofTask.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+                String selection = (String) parent.getItemAtPosition(position);
+                if (!TextUtils.isEmpty(selection)){
+                    if (selection.equals(getString(R.string.important_yes))){
+                        mTask = TaskContract.TaskEntry.IMPORTANT_YES;
+                    }
+                    else if (selection.equals(getString(R.string.important_no))){
+                        mTask = TaskContract.TaskEntry.IMPORTANT_NO;
+                    }
+                    else {
+                        mTask = TaskContract.TaskEntry.IMPORTANT_UNKNOWN;
+                    }
+                }
             }
 
             @Override
