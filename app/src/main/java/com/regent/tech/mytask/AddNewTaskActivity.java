@@ -77,7 +77,9 @@ public class AddNewTaskActivity extends AppCompatActivity {
         });
     }
 
+    private void insertTask(){
 
+    }
 
 
     @Override
