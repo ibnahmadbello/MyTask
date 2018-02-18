@@ -2,4 +2,5 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="entire_margin">10dp</dimen>
+    <dimen name="main_activity_padding">20dp</dimen>
 </resources>
