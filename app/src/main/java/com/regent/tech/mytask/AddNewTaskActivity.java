@@ -1,5 +1,7 @@
 package com.regent.tech.mytask;
 
+import android.content.ContentValues;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,7 +14,9 @@ import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
+import com.regent.tech.mytask.Database.DatabaseSQLiteOpenHelper;
 import com.regent.tech.mytask.Database.TaskContract;
 
 public class AddNewTaskActivity extends AppCompatActivity {
@@ -78,7 +82,35 @@ public class AddNewTaskActivity extends AppCompatActivity {
     }
 
     private void insertTask(){
+        String nameOfTask = mTitleofTask.getText().toString().trim();
+        String detailOfTask = mDetailofTask.getText().toString().trim();
+        String dateOfTask = mDeadlineofTask.getText().toString().trim();
 
+        //Create a database helper
+        DatabaseSQLiteOpenHelper helper = new DatabaseSQLiteOpenHelper(this);
+
+        //Get the database in write mode
+        SQLiteDatabase db = helper.getWritableDatabase();
+
+        //ContentValues to insert task to the db
+        ContentValues values = new ContentValues();
+        values.put(TaskContract.TaskEntry.COLUMN_TASK_NAME, nameOfTask);
+        values.put(TaskContract.TaskEntry.COLUMN_TASK_DETAILS, detailOfTask);
+        values.put(TaskContract.TaskEntry.COLUMN_TASK_DATE, dateOfTask);
+        values.put(TaskContract.TaskEntry.COLUMN_TASK_STATUS, mTask);
+
+        //Insert a new row
+        long newRowId = db.insert(TaskContract.TaskEntry.TABLE_NAME, null, values);
+
+        //Show a toast depending on if the row insert was successful or not
+        if (newRowId == -1){
+            //This toast display if there is an error while inserting a new task
+            Toast.makeText(this, "Error inserting a task", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            //This toast display if there is a successful insertion of a new task
+            Toast.makeText(this, "Successfully inserted a new task", Toast.LENGTH_SHORT).show();
+        }
     }
 
 
