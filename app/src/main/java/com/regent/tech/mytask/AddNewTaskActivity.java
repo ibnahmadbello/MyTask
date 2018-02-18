@@ -47,14 +47,14 @@ public class AddNewTaskActivity extends AppCompatActivity {
 
     private void setupSpinner(){
         //Create the Adapter for the Spinner
-        ArrayAdapter stateofTaskAdapter = ArrayAdapter.createFromResource(this, R.array.task_important,
+        ArrayAdapter stateOfTaskAdapter = ArrayAdapter.createFromResource(this, R.array.task_important,
                 android.R.layout.simple_spinner_item);
 
         //Specify the dropdown layout style
-        stateofTaskAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        stateOfTaskAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
 
         //Attached the adapter to the Spinner
-        mStateofTask.setAdapter(stateofTaskAdapter);
+        mStateofTask.setAdapter(stateOfTaskAdapter);
 
         //Set the integer selected to a constant value
         mStateofTask.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
