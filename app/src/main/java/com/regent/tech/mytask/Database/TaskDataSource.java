@@ -5,8 +5,6 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
-import com.regent.tech.mytask.model.Task;
-
 /**
  * Created by root on 2/12/18.
  */

@@ -7,8 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.regent.tech.mytask.model.Task;
-
 import java.util.Collections;
 import java.util.List;
 

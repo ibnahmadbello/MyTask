@@ -14,8 +14,6 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.regent.tech.mytask.Database.TaskContract;
-import com.regent.tech.mytask.Database.TaskDataSource;
-import com.regent.tech.mytask.model.Task;
 
 public class AddNewTaskActivity extends AppCompatActivity {
 

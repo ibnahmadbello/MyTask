@@ -1,7 +1,5 @@
 package com.regent.tech.mytask.Database;
 
-import com.regent.tech.mytask.model.Task;
-
 import java.util.ArrayList;
 import java.util.List;
 
