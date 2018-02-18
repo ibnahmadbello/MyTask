@@ -13,8 +13,6 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
 
     private FloatingActionButton floatingActionButton;
-    private RecyclerView recyclerView;
-    private TaskAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,21 +29,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //Setting the RecylerView
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-
-        setupRecyclerView();
     }
 
-    private void setupRecyclerView(){
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        recyclerView.setLayoutManager(layoutManager);
-
-        recyclerView.setHasFixedSize(true);
-        adapter = new TaskAdapter(this);
-        recyclerView.setAdapter(adapter);
-    }
 
     @Override
     protected void onResume(){

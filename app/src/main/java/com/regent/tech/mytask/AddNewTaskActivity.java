@@ -21,7 +21,7 @@ public class AddNewTaskActivity extends AppCompatActivity {
 
     private EditText mTitleofTask;
     private EditText mDetailofTask;
-    private DatePicker mDeadlineofTask;
+    private EditText mDeadlineofTask;
     private Spinner mStateofTask;
 
 
@@ -34,7 +34,7 @@ public class AddNewTaskActivity extends AppCompatActivity {
 
         mTitleofTask = (EditText) findViewById(R.id.write_your_title_here);
         mDetailofTask = (EditText) findViewById(R.id.type_your_details_here);
-        mDeadlineofTask = (DatePicker) findViewById(R.id.date_of_your_task);
+        mDeadlineofTask = (EditText) findViewById(R.id.date_of_your_task);
         mStateofTask = (Spinner) findViewById(R.id.spinner_yes_or_no);
 
         setupSpinner();
@@ -74,6 +74,8 @@ public class AddNewTaskActivity extends AppCompatActivity {
 
         });
     }
+
+
 
 
     @Override
