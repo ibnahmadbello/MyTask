@@ -126,6 +126,8 @@ public class AddNewTaskActivity extends AppCompatActivity {
         switch (menuItem.getItemId()){
             case R.id.save_action:
                 //Make a call to the insert database method
+                insertTask();
+
                 finish(); //Finish Activity
                 return true;
             case android.R.id.home:
