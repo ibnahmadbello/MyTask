@@ -53,25 +53,16 @@ public class AddNewTaskActivity extends AppCompatActivity {
         mStateofTask.setAdapter(stateofTaskAdapter);
 
         //Set the integer selected to a constant value
-        mStateofTask.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        mStateofTask.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String selection = (String) parent.getItemAtPosition(position);
-                if (!TextUtils.isEmpty(selection)){
-                    if (selection.equals(getString(R.string.important_yes))){
-                        mTask = TaskContract.TaskEntry.IMPORTANT_YES;
-                    }
-                    else if (selection.equals(getString(R.string.important_no))){
-                        mTask = TaskContract.TaskEntry.IMPORTANT_NO;
-                    }
-                    else {
-                        mTask = TaskContract.TaskEntry.IMPORTANT_UNKNOWN;
-                    }
-                }
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
             }
 
-            //Because AdapterView is an abstract class, onNothingSelected must be defined
-
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                mTask = TaskContract.TaskEntry.IMPORTANT_UNKNOWN;
+            }
         });
     }
 
