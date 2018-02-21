@@ -80,7 +80,37 @@ public class MainActivity extends AppCompatActivity {
                     TaskContract.TaskEntry.COLUMN_TASK_DETAILS + "\t" +
                     TaskContract.TaskEntry.COLUMN_TASK_DATE + "\t" +
                     TaskContract.TaskEntry.COLUMN_TASK_STATUS + "\n\n");
+
+            // Figure out the index of each column
+            int idColumnIndex = cursor.getColumnIndex(TaskContract.TaskEntry._ID);
+            int nameColumnIndex = cursor.getColumnIndex(TaskContract.TaskEntry.COLUMN_TASK_NAME);
+            int detailColumnIndex = cursor.getColumnIndex(TaskContract.TaskEntry.COLUMN_TASK_DETAILS);
+            int dateColumnIndex = cursor.getColumnIndex(TaskContract.TaskEntry.COLUMN_TASK_DATE);
+            int statusColumnIndex = cursor.getColumnIndex(TaskContract.TaskEntry.COLUMN_TASK_STATUS);
+
+            // Iterate through all the returned rows in the cursor
+            while (cursor.moveToNext()) {
+                // Use that index to extract the String or Int value of the word
+                // at the current row the cursor is on.
+                int currentID = cursor.getInt(idColumnIndex);
+                String currentName = cursor.getString(nameColumnIndex);
+                String currentDetail = cursor.getString(detailColumnIndex);
+                String currentDate = cursor.getString(dateColumnIndex);
+                int currentStatus = cursor.getInt(statusColumnIndex);
+                // Display the values from each column of the current row in the cursor in the TextView
+                displayTask.append(("\n" + currentID + "\t" +
+                        currentName + "\t" +
+                        currentDetail + "\t" +
+                        currentDate + "\t" +
+                        currentStatus));
+            }
+        } finally {
+            // Always close the cursor when you're done reading from it. This releases all its
+            // resources and makes it invalid.
+            cursor.close();
         }
+
+
     }
 
 }
