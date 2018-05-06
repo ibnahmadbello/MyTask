@@ -14,4 +14,6 @@
     <string name="important_yes">Yes</string>
     <string name="important_no">No</string>
     <string name="important_undecided">I don\'t Know</string>
+    <string name="date_hint">Type your date of your task here</string>
+    <string name="task">Task will appear here</string>
 </resources>
